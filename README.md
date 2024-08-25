@@ -1,5 +1,26 @@
 # Running Oracle Apex on Docker Containers
 
+## TL;DR
+If you are in a rush, simply clone this repository:
+```
+git clone https://github.com/thebazshah/apex-docker-setup.git
+```
+
+Go into the folder:
+```
+cd apex-docker-setup
+```
+And run this command:
+```
+docker compose up -d
+```
+Wait for containers to start. When DB container is in `Healthy` state, and the other container and network are `Started`, you can use this command to see log of ORDS/Apex installation.
+```
+docker exec -it apex-ords tail -f /tmp/install_container.log
+```
+
+Now you can read longer version.
+
 ## Downloading Docker images for running Oracle DB, Oracle ORDS and Oracle Apex (optional)
 There are two images needed to run the set up. We can optionally download the images beforehand. If images are not downloaded, they will be downloaded automatically. Following images are needed:
 1. container-registry.oracle.com/database/free:latest
