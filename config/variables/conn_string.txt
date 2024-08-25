@@ -1,0 +1,1 @@
+CONN_STRING=sys/My0raPwD1234@apex-db:1521/FREEPDB1
